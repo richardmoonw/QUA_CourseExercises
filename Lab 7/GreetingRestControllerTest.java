@@ -58,7 +58,7 @@ public class GreetingRestControllerTest {
 	}
 	
 	@Test
-	public void givenARequest_WhenEmptyName_thenGoodbyeSmith() throws Exception {
+	public void givenARequest_WhenNullName_thenGoodbyeWoody() throws Exception {
 		this.mockMvc.perform(get("/goodbye?name="))
 			.andExpect(status().isOk())
 			.andExpect(jsonPath("content", equalTo("Goodbye Woody, nice to meet you")));
